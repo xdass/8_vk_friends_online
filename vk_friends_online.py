@@ -13,6 +13,7 @@ def get_user_password():
 
 
 def get_online_friends(login, password):
+    # VKScript code for execute method https://vk.com/dev/execute
     code = """
     var online =  API.friends.getOnline({"user_id": ""});
 

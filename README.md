@@ -14,6 +14,10 @@ pip install -r requirements.txt # alternatively try pip3
 
 ```bash
 $ python vk_friends_online.py
+Введите ваш логин VK: login
+Введите пароль: *********
+Пользователи онлайн:
+Алена Гулевич
 ```
 
 # Project Goals
