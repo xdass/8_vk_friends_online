@@ -5,16 +5,11 @@ APP_ID = 6238133  # чтобы получить app_id, нужно зареги�
 
 
 def get_user_login():
-    #login = input('Введите ваш логин VK: ')
-    login = 'xbase@uralweb.ru'
-    return login
+    return input('Введите ваш логин VK: ')
 
 
 def get_user_password():
-    #password = login = getpass.getpass('Введите пароль: ')
-    #password= input('Введите пароль: ')
-    password = '420600base'
-    return password
+    return getpass.getpass('Введите пароль: ')
 
 
 def get_online_friends(login, password):
@@ -24,8 +19,7 @@ def get_online_friends(login, password):
     var result = [];
     var user = "";
     while (online.length > 0) {
-    
-    result.push(API.users.get({"user_ids": online.shift()}));
+        result.push(API.users.get({"user_ids": online.shift()}));
     };
     
     return result;

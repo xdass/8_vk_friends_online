@@ -1,6 +1,6 @@
 # Watcher of Friends Online
 
-[TODO. There will be project description]
+It's simple program to output online friends from your VK.com account.
 
 # How to Install
 
@@ -10,7 +10,11 @@ Python 3 should be already installed. Then use pip (or pip3 if there is a confli
 pip install -r requirements.txt # alternatively try pip3
 ```
 
-Remember, it is recommended to use [virtualenv/venv](https://devman.org/encyclopedia/pip/pip_virtualenv/) for better isolation.
+# How to use
+
+```bash
+$ python vk_friends_online.py
+```
 
 # Project Goals
 
