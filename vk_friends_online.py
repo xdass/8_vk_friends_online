@@ -19,7 +19,7 @@ def get_user_password():
 
 def get_online_friends(login, password):
     code = """
-    var online =  API.friends.getOnline({"user_id": 5088491});
+    var online =  API.friends.getOnline({"user_id": ""});
 
     var result = [];
     var user = "";
