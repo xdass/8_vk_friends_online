@@ -13,18 +13,6 @@ def get_user_password():
 
 
 def get_online_friends(login, password):
-    # VKScript code for execute method https://vk.com/dev/execute
-    code = """
-    var online =  API.friends.getOnline({"user_id": ""});
-
-    var result = [];
-    var user = "";
-    while (online.length > 0) {
-        result.push(API.users.get({"user_ids": online.shift()}));
-    };
-    
-    return result;
-    """
     session = vk.AuthSession(
         app_id=APP_ID,
         user_login=login,
@@ -32,13 +20,14 @@ def get_online_friends(login, password):
         scope='offline, friends'
     )
     api = vk.API(session)
-    return api.execute(code=code)
+    online_users = api.friends.getOnline()
+    return api.users.get(user_ids=online_users)
 
 
 def output_friends_to_console(friends_online):
     print('Пользователи онлайн: ')
     for user in friends_online:
-        print(user[0]['first_name'], user[0]['last_name'])
+        print(user['first_name'], user['last_name'])
 
 if __name__ == '__main__':
     login = get_user_login()
