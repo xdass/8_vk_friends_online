@@ -17,7 +17,7 @@ def get_online_friends(login, password):
         app_id=APP_ID,
         user_login=login,
         user_password=password,
-        scope='offline, friends'
+        scope='friends'
     )
     api = vk.API(session)
     online_users = api.friends.getOnline()
