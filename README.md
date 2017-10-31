@@ -11,6 +11,8 @@ pip install -r requirements.txt # alternatively try pip3
 ```
 
 # How to use
+To start working with this script you need APP_ID.<br>
+Register new Standalone app here [vk-api](https://vk.com/dev)
 
 ```bash
 $ python vk_friends_online.py
